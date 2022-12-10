@@ -18,9 +18,15 @@
     grid-column: col-start 8  ;
     padding: 4px;
   }
-  
-
 .bg-danger{
     background-color:red;
 }
+@media screen and (max-width: 480px) {
+    
+ .bg-danger{
+    background-color: green;
+ }
+
+
+  }
 
