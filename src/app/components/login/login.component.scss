@@ -1,3 +1,13 @@
-ul  {
-    list-style: none;
+.login-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container {
+    width: 500px;
+}
+
+.faild-parent {
+    display: flex;
+    flex-wrap: wrap;
 }

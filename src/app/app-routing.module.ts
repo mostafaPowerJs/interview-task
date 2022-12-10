@@ -7,13 +7,16 @@ import { SearchComponent } from './components/search/search.component';
 
 const routes: Routes = [
   {
-    path:'' , component:LoginComponent
+    path: '**', component: LoginComponent
   },
   {
-    path:'orders' , component:OrdersComponent
+    path: '', component: LoginComponent
   },
   {
-    path:'search' , component:SearchComponent
+    path: 'orders', component: OrdersComponent
+  },
+  {
+    path: 'search', component: SearchComponent
   },
 ];
 
