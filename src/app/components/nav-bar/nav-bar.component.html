@@ -10,8 +10,16 @@
                         <a href="#!"> {{item.nameItem}}</a>
                     </li>
                 </ul>
-                <div>
+                <div *ngIf="switch">
                     <span class="log-label">Log in</span>
+                </div>
+                <div *ngIf="!switch">
+                    <span class="log-label" style="margin-right: 10px;">
+                    <input type="text" placeholder="search">
+                </span>
+                    <span class="log-label">
+                        3rbia Account
+                    </span>
                 </div>
             </div>
         </nav>
