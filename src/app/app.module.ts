@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { OrdersComponent } from './components/orders/orders.component';
-import { SearchComponent } from './components/search/search.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 
@@ -14,7 +13,6 @@ import { FooterComponent } from './components/footer/footer.component';
     AppComponent,
     LoginComponent,
     OrdersComponent,
-    SearchComponent,
     NavBarComponent,
     FooterComponent
   ],
