@@ -6,9 +6,7 @@ import { SearchComponent } from './components/search/search.component';
 
 
 const routes: Routes = [
-  {
-    path: '**', component: LoginComponent
-  },
+
   {
     path: '', component: LoginComponent
   },
