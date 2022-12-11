@@ -11,12 +11,17 @@ products:any = [];
 
   ngOnInit() : void{
   this.getproducts();
+
   }
 
   getproducts(){
  this._ProductsService.getproducts().subscribe((res) => {
    this.products = res.products;
-   console.log(this.products);
+   for (let product of this.products) {
+    let xx = product.description.slice(0, 50);
+    product.description = xx;
+    
+   }
    
  })
   }
