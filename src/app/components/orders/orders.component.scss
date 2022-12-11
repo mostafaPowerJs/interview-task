@@ -1,32 +1,35 @@
-.container{
-    width: 80%;
-    margin: auto;
-    margin-top: 5%;
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
 }
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat(12,  4fr);
-  }
+
+
+
 .item1 {
-    grid-column: col-start / col-start 4;
-    padding: 4px;
-    border-radius: 20px;
-    border: 0.1px solid grey;
-    margin-right: 4px;
-  }
-.item2 {
-    grid-column: col-start 8  ;
-    padding: 4px;
-  }
-.bg-danger{
-    background-color:red;
+  padding: 4px;
+  border-radius: 20px;
+  border: 0.1px solid grey;
+  margin-right: 4px;
 }
+
+.item2 {
+  padding: 4px;
+}
+
+.dir-page span {
+  color: #6e6e6e;
+}
+
+.active-dir {
+  color: black !important;
+}
+
 @media screen and (max-width: 480px) {
-    
- .bg-danger{
+
+  .bg-danger {
     background-color: green;
- }
-
-
   }
 
+
+}
