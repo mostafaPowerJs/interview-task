@@ -14,7 +14,6 @@
   border: 1px solid #6e6e6e;
   border-radius: 10px;
   box-sizing: border-box;
-  position: sticky;
   padding: 20px;
   
 }
@@ -61,7 +60,10 @@ figcaption {
   text-decoration: line-through;
   margin-right: 20px;
 }
-
+strong {
+  color: black;
+  font-weight: bold;
+}
 @media screen and (max-width: 480px) {
 
   .bg-danger {
