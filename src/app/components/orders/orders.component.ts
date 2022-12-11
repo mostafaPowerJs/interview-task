@@ -18,7 +18,7 @@ products:any = [];
  this._ProductsService.getproducts().subscribe((res) => {
    this.products = res.products;
    for (let product of this.products) {
-    let xx = product.description.slice(0, 70);
+    let xx = product.description.slice(0, 60);
     product.description = xx;
     
    }
