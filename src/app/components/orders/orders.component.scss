@@ -7,8 +7,6 @@
 .said-menu {
   width: 25%;
   margin: 0;
-  padding: 10px;
-  
 }
 .said-menu-content {
   border: 1px solid #6e6e6e;
@@ -17,14 +15,17 @@
   padding: 20px;
   
 }
-
+.all-items {
+  width: 75%;
+}
 .items {
-  width: 25%;
+  width: 33.3333333%;
   margin: 0;
-  padding: 10px;
- 
+  box-sizing: border-box;
+ padding: 0 10px;
 }
 .card {
+  
   border: 1px solid #6e6e6e;
   border-radius: 10px;
 }
