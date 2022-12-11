@@ -39,15 +39,15 @@
                     <figure>
                         <img src="{{view.thumbnail}}" alt="Trulli" style="width:100%">
                         <span class="discount">
-                            -12.96%
+                            -{{view.discountPercentage}}%
                         </span>
                         <h3>{{view.title}}</h3>
                         <figcaption>{{view.description}}</figcaption>
                         <div class="my-3">
-                            <span class="old-price"><strong>549</strong> USD</span><span><strong>477.85</strong>USD</span>
+                            <span class="old-price"><strong>549</strong> USD</span><span><strong>{{view.price}}</strong>USD</span>
                         </div>
                         <div class="my-3">
-                            <span>Brand :<strong>Apple</strong></span>
+                            <span>Brand :<strong>{{view.brand}}</strong></span>
                         </div>
                         <div class="my-3">
                             <span>Category :<strong>Smartphones</strong></span>
