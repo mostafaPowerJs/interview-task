@@ -4,17 +4,30 @@
   margin-top: 5%;
 }
 
-
-
-.item1 {
-  padding: 4px;
-  border-radius: 20px;
-  border: 0.1px solid grey;
-  margin-right: 4px;
+.said-menu {
+  width: 25%;
+  margin: 0;
+  padding: 10px;
+  
+}
+.said-menu-content {
+  border: 1px solid #6e6e6e;
+  border-radius: 10px;
+  box-sizing: border-box;
+  position: sticky;
+  padding: 20px;
+  
 }
 
-.item2 {
-  padding: 4px;
+.items {
+  width: 25%;
+  margin: 0;
+  padding: 10px;
+ 
+}
+.card {
+  border: 1px solid #6e6e6e;
+  border-radius: 10px;
 }
 
 .dir-page span {
@@ -23,6 +36,30 @@
 
 .active-dir {
   color: black !important;
+}
+
+figure {
+  position: relative;
+  margin: 0 5px;
+  padding: 5px;
+}
+
+figure .discount {
+  background-color: #0dcaf0;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+figcaption {
+  margin: 10px 0;
+  color: #6e6e6e;
+}
+
+.old-price {
+  text-decoration: line-through;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 480px) {
