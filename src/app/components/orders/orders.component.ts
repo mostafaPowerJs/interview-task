@@ -41,7 +41,6 @@ this.getproducts();
    for (let product of this.products) {
     let xx = product.description.slice(0, 60);
     product.description = xx;
-    
    }
    
  })

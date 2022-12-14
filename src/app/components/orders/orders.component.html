@@ -7,6 +7,7 @@
     <div class="dir-page text-start my-5">
         <span>Home /</span><span> Products /</span><span> Smart Phones /</span><span class="active-dir"> iphone</span>
     </div>
+    <!-- this is the left bar of the page -->
     <div class="wrapper d-flex justify-content-start flex-wrap">
         <div class="said-menu">
             <div class="said-menu-content">
@@ -33,6 +34,7 @@
             </div>
 
         </div>
+        <!-- this itirate all over the products  -->
         <div class="all-items d-flex justify-content-start flex-wrap">
             <div class="items" *ngFor="let view of products | paginate:{ itemsPerPage: tableSize,currentPage: page, totalItems: count }; let i = index">
                 <div class="card">
@@ -66,6 +68,7 @@
                 </div>
                 
             </div>
+            <!-- this is the pagination -->
             <pagination-controls
             style="margin: auto;"
             previousLabel="Prev"

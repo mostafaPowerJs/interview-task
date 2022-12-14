@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductsService } from 'src/app/shared/products.service';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -36,8 +37,15 @@ this._ProductsService.Data.subscribe((res) => {
     }
   ]
 
-  logout(){
+  signout(){
     localStorage.removeItem('Authorization');
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Signed out ',
+      showConfirmButton: false,
+      timer: 1500
+    });
     this._Router.navigateByUrl('/');
   }
 
