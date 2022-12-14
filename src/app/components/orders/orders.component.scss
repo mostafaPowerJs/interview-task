@@ -13,7 +13,8 @@
   border-radius: 10px;
   box-sizing: border-box;
   padding: 20px;
-  
+  position: sticky;
+  top: 30px;
 }
 .all-items {
   width: 75%;
@@ -65,11 +66,36 @@ strong {
   color: black;
   font-weight: bold;
 }
-@media screen and (max-width: 480px) {
 
-  .bg-danger {
-    background-color: green;
+.details {
+  height: 250px;
+}
+@media (min-width:992px) and (max-width: 1199px){
+  .said-menu {
+    width: 33.33333%;
   }
+  .items {
+    width: 50%;
+  }
+  .all-items {
+    width: 66.66666%;
+  }
+}
 
-
+@media (min-width:600px) and (max-width: 991px){
+  .said-menu {
+    width: 50%;
+  }
+  .items {
+    width: 100%;
+  }
+  .all-items {
+    width: 50%;
+  }
+  .container {
+    width: 96%;
+    margin-top: 5%;
+    margin: 5% 2%;
+  }
+  
 }
