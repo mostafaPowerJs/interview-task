@@ -21,6 +21,7 @@ const last = seif[seif.length - 1]
 if( last == 'orders'){
 this.switch = false
 }  
+// to set the count in the market car
 this._ProductsService.Data.subscribe((res) => {
   this.count = res;
 })
@@ -36,7 +37,7 @@ this._ProductsService.Data.subscribe((res) => {
       img : null
     }
   ]
-
+// this function to signout
   signout(){
     localStorage.removeItem('Authorization');
     Swal.fire({
