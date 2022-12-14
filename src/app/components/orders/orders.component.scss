@@ -15,6 +15,7 @@
   padding: 20px;
   position: sticky;
   top: 30px;
+
 }
 .all-items {
   width: 75%;
@@ -82,7 +83,7 @@ strong {
   }
 }
 
-@media (min-width:600px) and (max-width: 991px){
+@media (min-width:550px) and (max-width: 991px){
   .said-menu {
     width: 50%;
   }
@@ -91,6 +92,24 @@ strong {
   }
   .all-items {
     width: 50%;
+  }
+  .container {
+    width: 96%;
+    margin-top: 5%;
+    margin: 5% 2%;
+  }
+  
+}
+@media (max-width: 549px){
+  .said-menu {
+    width: 100%;
+  }
+  .items {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .all-items {
+    width: 100%;
   }
   .container {
     width: 96%;
