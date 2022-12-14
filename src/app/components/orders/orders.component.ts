@@ -46,3 +46,37 @@ this.getproducts();
  })
   }
 }
+
+
+
+
+//search function
+
+/**
+ *   employees = [
+    {name: 'Asmaa Hassan', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee1.jpg'},
+    {name: 'Esraa Sayed', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '29602015214789', img: 'assets/images/employee2.jpg'},
+    {name: 'Glal Eid', phoneNumber: '01247845125', mail: 'Glal@eda.com', nationalID: '28512185201450', img: 'assets/images/employee3.jpg'},
+    {name: 'Khalid Sayed', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee4.jpg'},
+    {name: 'Osama Mahmoud', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee5.jpg'},
+    {name: 'Hossam Aly', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee6.jpg'},
+    {name: 'Maichel Labeb', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee7.jpg'},
+    {name: 'Fawzi Gamal', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee8.jpg'},
+    
+  ];
+
+
+  searchWords: string = '';
+
+  checkEmployees = this.employees;
+
+  search:string = 'search'
+
+  constructor() {
+
+  }
+
+  searchMethod() {
+    this.checkEmployees = this.employees.filter(employee => employee.name.includes(this.searchWords) || employee.phoneNumber.includes(this.searchWords) || employee.nationalID.includes(this.searchWords));
+  }
+ */
