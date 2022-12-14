@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+public Data = new BehaviorSubject(0);
 
   constructor(private _HttpClient:HttpClient) { }
 

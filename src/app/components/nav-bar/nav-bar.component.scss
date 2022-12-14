@@ -36,4 +36,14 @@ ul li a {
 .log-label {
     color: #6e6e6e;
 }
-
+.productcount{
+    background-color: rgb(157, 232, 83);
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+@media (min-width:992px) and (max-width: 1199px){
+    .log-label{
+        width: 10px;
+    }
+  }

@@ -34,7 +34,7 @@
 
         </div>
         <div class="all-items d-flex justify-content-start flex-wrap">
-            <div class="items" *ngFor="let view of products">
+            <div class="items" *ngFor="let view of products | paginate:{ itemsPerPage: tableSize,currentPage: page, totalItems: count }; let i = index">
                 <div class="card">
                     <figure>
                         <img src="{{view.thumbnail}}" alt="Trulli" style="width:100%; height: 200px;">
@@ -60,14 +60,24 @@
 
                         </div>
                         <div class="my-3">
-                            <button class="btn btn-info w-100">ADD TO CART</button>
+                            <button class="btn btn-info w-100" (click)="addproduct()">ADD TO CART</button>
                         </div>
                     </figure>
                 </div>
+                
             </div>
-
+            <pagination-controls
+            style="margin: auto;"
+            previousLabel="Prev"
+            nextLabel="Next"
+            (pageChange)="onTableDataChange($event)"
+            >
+            </pagination-controls>
+          
         </div>
+     
     </div>
 
+    
 </div>
 <app-footer></app-footer>

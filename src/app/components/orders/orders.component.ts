@@ -7,13 +7,34 @@ import { ProductsService } from './../../shared/products.service'
 })
 export class OrdersComponent {
 products:any = [];
+selectedproducts : number = 0;
+title = 'pagination';
+POSTS: any ;
+page : number = 1;
+count : number = 0 ;
+tableSize: number = 6;
   constructor(private _ProductsService:ProductsService){}
 
   ngOnInit() : void{
   this.getproducts();
 
   }
-
+  //this is for the pagination
+  onTableDataChange(event : any){
+this.page = event;
+this.getproducts();
+  }
+  onTableSizeChange(event : any): void{
+this.tableSize = event.target.value;
+this.page = 1;
+this.getproducts();
+  }
+// adding products to the cart
+  addproduct(){
+    this.selectedproducts = this.selectedproducts + 1;
+    this._ProductsService.Data.next(this.selectedproducts);
+  }
+//getting the products from the api
   getproducts(){
  this._ProductsService.getproducts().subscribe((res) => {
    this.products = res.products;
