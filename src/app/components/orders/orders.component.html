@@ -1,5 +1,7 @@
 <app-nav-bar></app-nav-bar>
 
+<input type="text" class="search" [(ngModel)]="searchWords" placeholder="search" (keypress)="searchMethod(searchWords)">
+
 <div class="container">
     <div class="head-page text-start">
         <h2>iphone</h2>
@@ -7,6 +9,8 @@
     <div class="dir-page text-start my-5">
         <span>Home /</span><span> Products /</span><span> Smart Phones /</span><span class="active-dir"> iphone</span>
     </div>
+    
+    
     <!-- this is the left bar of the page -->
     <div class="wrapper d-flex justify-content-start flex-wrap">
         <div class="said-menu">

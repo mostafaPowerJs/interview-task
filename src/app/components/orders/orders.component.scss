@@ -3,6 +3,11 @@
 	margin: auto;
 	margin-top: 5%;
 }
+.search{
+  position:absolute; 
+  margin: -37px 0px ;
+  right: 200px;
+}
 .said-menu {
 	width: 25%;
 	margin: 0;
@@ -66,6 +71,7 @@ strong {
 	height: 250px;
 }
 @media (min-width:992px) and (max-width: 1199px) {
+  
 	.said-menu {
 		width: 33.33333%;
 	}
@@ -77,6 +83,10 @@ strong {
 	}
 }
 @media (min-width:550px) and (max-width: 991px) {
+  .search{
+    margin: -27px 0px;
+    right: 140px;
+  }
 	.said-menu {
 		width: 50%;
 	}
@@ -93,6 +103,10 @@ strong {
 	}
 }
 @media (max-width: 549px) {
+  .search{
+    margin: -27px 0px;
+    right: 140px;
+  }
 	.said-menu {
 		width: 100%;
 	}

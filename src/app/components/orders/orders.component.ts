@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './../../shared/products.service'
 @Component({
   selector: 'app-orders',
@@ -13,7 +13,9 @@ POSTS: any ;
 page : number = 1;
 count : number = 0 ;
 tableSize: number = 6;
+searchWords: string = '';
   constructor(private _ProductsService:ProductsService){}
+
 
   ngOnInit() : void{
   this.getproducts();
@@ -38,6 +40,7 @@ this.getproducts();
   getproducts(){
  this._ProductsService.getproducts().subscribe((res) => {
    this.products = res.products;
+   
    for (let product of this.products) {
     let xx = product.description.slice(0, 60);
     product.description = xx;
@@ -45,38 +48,17 @@ this.getproducts();
    
  })
   }
+// this function filters the products
+  searchMethod(word : string) {
+    this.products = this.products.filter((element: { brand: string | string[]; title: string | string[]; }) =>
+       element.brand.includes(word) || element.title.includes(word) );
+      //  console.log(word);   
+
+  }
+  
+ 
 }
 
 
 
 
-//search function
-
-/**
- *   employees = [
-    {name: 'Asmaa Hassan', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee1.jpg'},
-    {name: 'Esraa Sayed', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '29602015214789', img: 'assets/images/employee2.jpg'},
-    {name: 'Glal Eid', phoneNumber: '01247845125', mail: 'Glal@eda.com', nationalID: '28512185201450', img: 'assets/images/employee3.jpg'},
-    {name: 'Khalid Sayed', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee4.jpg'},
-    {name: 'Osama Mahmoud', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee5.jpg'},
-    {name: 'Hossam Aly', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee6.jpg'},
-    {name: 'Maichel Labeb', phoneNumber: '01223654123', mail: 'asmaa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee7.jpg'},
-    {name: 'Fawzi Gamal', phoneNumber: '01001245789', mail: 'esraa@eda.com', nationalID: '28512185201450', img: 'assets/images/employee8.jpg'},
-    
-  ];
-
-
-  searchWords: string = '';
-
-  checkEmployees = this.employees;
-
-  search:string = 'search'
-
-  constructor() {
-
-  }
-
-  searchMethod() {
-    this.checkEmployees = this.employees.filter(employee => employee.name.includes(this.searchWords) || employee.phoneNumber.includes(this.searchWords) || employee.nationalID.includes(this.searchWords));
-  }
- */
